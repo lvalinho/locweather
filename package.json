@@ -1,7 +1,7 @@
 {
-  "name": "phonegap-template-hello-world",
+  "name": "LocWeather",
   "version": "4.0.2",
-  "description": "> A Hello World template built with PhoneGap",
+  "description": "> LocWeather",
   "repository": {
     "type": "git",
     "url": "https://github.com/phonegap/phonegap-app-hello-world.git"
