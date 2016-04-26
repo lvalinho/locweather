@@ -10,10 +10,7 @@ function onDeviceReady(){
 		getMoreLocation();
 	});
 
-	$('#show_more_weather').click(function(e){
-		e.preventDefault();
-		getMoreWeather();
-	});
+	
 
 	getDate();
 
@@ -111,24 +108,4 @@ function getWeather(city, country){
 			$('#weather').html(html);
 		}
 	});	
-}
-
-function getMoreWeather(){
-	//Close Dropdown menu
-	$('.navbar_toggle').click();
-
-	var html = '';
-
-
-	navigator.geolocation.getCurrentPosition(function(position){
-		html = '<ul id="mode_location_list" class="list-group">' + 
-				'<li class="list-group-item"><strong>Latitude: </strong>'+position.coords.latitude+'</li>' +
-				'<li class="list-group-item"><strong>Longitude: </strong>'+position.coords.longitude+'</li>' +
-				'<li class="list-group-item"><strong>Altitude: </strong>'+position.coords.altitude+'</li>' +
-				'<li class="list-group-item"><strong>Accuracy: </strong>'+position.coords.accuracy+'</li>' +
-				'</ul>';
-
-		$('#more_weather_display').html(html);
-
-	})
 }
